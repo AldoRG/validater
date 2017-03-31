@@ -1,4 +1,4 @@
-<?php namespace Gamma\PhpFW;
+<?php namespace aldorg\validater;
 
 /**
 *  A sample class

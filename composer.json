@@ -1,5 +1,5 @@
 {
-    "name": "gamma/composer-library-template",
+    "name": "aldorg/composer-library-template",
     "description": "Boilerplate package for creating other packages.",
     "keywords": ["template", "composer", "package"],
     "license": "proprietary",
@@ -18,7 +18,7 @@
     },
 	"autoload": {
         "psr-4": {
-            "Gamma\\PhpFW\\": "src/"
+            "aldorg\\validater\\": "src/"
         }
     }
 }

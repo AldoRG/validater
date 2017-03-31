@@ -18,7 +18,7 @@ class YourClassTest extends PHPUnit_Framework_TestCase{
   *
   */
   public function testIsThereAnySyntaxError(){
-	$var = new Gamma\PhpFW\YourClass;
+	$var = new aldorg\validater\YourClass;
 	$this->assertTrue(is_object($var));
 	unset($var);
   }
@@ -31,7 +31,7 @@ class YourClassTest extends PHPUnit_Framework_TestCase{
   *
   */
   public function testMethod1(){
-	$var = new Gamma\PhpFW\YourClass;
+	$var = new aldorg\validater\YourClass;
 	$this->assertTrue($var->method1("hey") == 'Hello World');
 	unset($var);
   }
