@@ -40,26 +40,6 @@ You can test this repository creating a new class in the Test folder, and using 
 vendor/bin/phpunit
 ```
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
 * [PHP](http://php.net/) - PHP language
