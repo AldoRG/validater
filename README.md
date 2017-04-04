@@ -46,6 +46,13 @@ Available methods:
 * validateBoolean
 * validateEmail
 * validateInteger
+* validateArray
+* validateNumeric
+* validateString
+* validateUrl
+* validateAlpha
+* validateAlphaNum
+* validateDate
 ```
 
 ## Running the tests
