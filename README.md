@@ -32,6 +32,22 @@ GitHub:
 https://github.com/AldoRG/validater.git
 ```
 
+## Code Examples
+
+All methods needs the data type to validate and is going to return a boolean result, you can validate different types of data using the methods below:
+
+```
+Validater::validateEmail("name@example.com");
+```
+
+Available methods:
+
+```
+* validateBoolean
+* validateEmail
+* validateInteger
+```
+
 ## Running the tests
 
 You can test this repository creating a new class in the Test folder, and using PHPUnit. Run your test cases using:
@@ -44,6 +60,7 @@ vendor/bin/phpunit
 
 * [PHP](http://php.net/) - PHP language
 * [Git](https://git-scm.com/) - Version Control System
+* [PHPUnit](https://phpunit.de/) - Programmer-oriented testing framework for PHP
 
 ## Contributing
 

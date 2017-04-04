@@ -1,27 +1,31 @@
 <?php namespace aldorg\validater;
 
 /**
-*  A sample class
+*  Validater Class
 *
-*  Use this section to define what this class is doing, the PHPDocumentator will use this
-*  to automatically generate an API documentation using this information.
+*  This is an simple class to validate data types for PHP codes. Using php filters with simple methods to verify info.
 *
-*  @author yourname
+*  @author Aldo Ruiz
 */
 class Validater{
-
-   /**  @var string $m_SampleProperty define here what this variable is for, do this for every instance variable */
-   private $m_SampleProperty = '';
- 
   /**
-  * Sample method 
+  * Validate that an attribute is a boolean.
   *
-  * Always create a corresponding docblock for each method, describing what it is for,
-  * this helps the phpdocumentator to properly generator the documentation
+  * @param  mixed   $boolean
+  * @return bool (string for testing purposes)
+  */
+    protected function validateBoolean($boolean)
+    {
+        $acceptable = [true, false, 0, 1, '0', '1'];
+
+        return in_array($boolean, $acceptable, true) ? 'true' : 'false';
+    }
+
+  /**
+  * Validate that an attribute is an email based on RFC 822 syntax.
   *
-  * @param string $email A string containing the parameter, do this for each parameter to the function, make sure to make it descriptive
-  *
-  * @return string
+  * @param  mixed $email
+  * @return bool (string for testing purposes)
   */
    public function validateEmail($email){
 			return filter_var($email, FILTER_VALIDATE_EMAIL) ? 'true' : 'false';
@@ -30,9 +34,8 @@ class Validater{
   /**
   * Validate that an attribute is an integer.
   *
-  * @param  string  $attribute
-  * @param  mixed   $value
-  * @return bool
+  * @param  mixed $number
+  * @return bool (string for testing purposes)
   */
     public function validateInteger($number)
     {
