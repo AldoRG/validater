@@ -14,7 +14,7 @@ class Validater{
   * @param  mixed   $boolean
   * @return bool (string for testing purposes)
   */
-    protected function validateBoolean($boolean)
+    public static function validateBoolean($boolean)
     {
         $acceptable = [true, false, 0, 1, '0', '1'];
 
@@ -27,7 +27,7 @@ class Validater{
   * @param  mixed $email
   * @return bool (string for testing purposes)
   */
-   public function validateEmail($email){
+   public static function validateEmail($email){
 			return filter_var($email, FILTER_VALIDATE_EMAIL) ? 'true' : 'false';
    }
 
@@ -37,7 +37,7 @@ class Validater{
   * @param  mixed $number
   * @return bool (string for testing purposes)
   */
-    public function validateInteger($number)
+    public static function validateInteger($number)
     {
       return filter_var($number, FILTER_VALIDATE_INT) ? 'true' : 'false';
     }
@@ -48,9 +48,9 @@ class Validater{
   * @param  array $array
   * @return bool
   */
-    protected function validateArray($array)
+    public static function validateArray($array)
     {
-      return is_array($array);
+      return is_array($array) ? 'true' : 'false';
     }
 
   /**
@@ -59,9 +59,9 @@ class Validater{
   * @param  mixed $number
   * @return bool
   */
-    protected function validateNumeric($number)
+    public static function validateNumeric($number)
     {
-      return is_numeric($number);
+      return is_numeric($number) ? 'true' : 'false';
     }
 
   /**
@@ -70,9 +70,9 @@ class Validater{
   * @param  string $string
   * @return bool
   */
-    protected function validateString($string)
+    public static function validateString($string)
     {
-      return is_string($string);
+      return is_string($string) ? 'true' : 'false';
     }
 
   /**
@@ -81,7 +81,7 @@ class Validater{
   * @param  mixed $url
   * @return bool
   */
-    protected function validateUrl($url)
+    public static function validateUrl($url)
     {
         return filter_var($url, FILTER_VALIDATE_URL) !== false;
     }
@@ -92,7 +92,7 @@ class Validater{
   * @param  mixed $string
   * @return bool
   */
-    protected function validateAlpha($string)
+    public static function validateAlpha($string)
     {
       return preg_match('/^[\pL\pM]+$/u', $string);
     }
@@ -103,7 +103,7 @@ class Validater{
   * @param  mixed $string
   * @return bool
   */
-    protected function validateAlphaNum($string)
+    public static function validateAlphaNum($string)
     {
       return preg_match('/^[\pL\pM\pN]+$/u', $string);
     }
@@ -114,7 +114,7 @@ class Validater{
   * @param  mixed $date
   * @return bool
   */
-    protected function validateDate($date)
+    public static function validateDate($date)
     {
         if ($date instanceof DateTime) {
             return true;

@@ -9,4 +9,13 @@
 	echo "\n";
 	echo Validater::validateInteger(1.1);
 	echo "\n";
+	echo Validater::validateBoolean(true);
+	echo "\n";
+	echo Validater::validateBoolean(false);
+	echo "\n";
+	echo Validater::validateArray(['1', '2']);
+	echo "\n";
+	echo Validater::validateArray("error");
+	echo "\n";
+
 ?>
