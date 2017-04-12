@@ -33,6 +33,7 @@ class ValidaterTest extends PHPUnit_Framework_TestCase{
   public function testValidateEmail(){
     $var = new aldorg\validater\Validater;
     $this->assertTrue($var->validateEmail("name@example.com") == 'true');
+    $this->assertTrue($var->validateEmail("name@example,.com") == 'false');
     $this->assertTrue($var->validateEmail("nameexample.com") == 'false');
     unset($var);
   }
